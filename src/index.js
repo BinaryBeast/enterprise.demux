@@ -3,7 +3,8 @@ console.log("");
 console.log("-- Starting Demux --")
 console.log("");
 
-const { massive } = require('demux-postgres')
+const massive = require("massive")
+//const { massive } = require("demux-postgres")
 const { BaseActionWatcher } = require("demux")
 const { MassiveActionHandler } = require("demux-postgres")
 const { NodeosActionReader } = require("demux-eos")
@@ -26,8 +27,8 @@ massive(dbConfig).then((db) => {
     const actionHandler = new MassiveActionHandler(
         handlerVersions,
         db,
-        "public",
-        migrationSequences
+        migrationSequences,
+        { dbSchema: "public" }
     )
     const actionWatcher = new BaseActionWatcher(actionReader, actionHandler, 500)
     actionWatcher.watch()
