@@ -4,7 +4,7 @@ function createMatchType(state, payload, blockInfo, context) {
     state.match_type.insert({
         id: data.match_type_uuid,
         type: data.type,
-        max_oppoonents: data.max_oppoonents,
+        max_opponents: data.max_opponents,
     }).then(matchType => {
         console.log("Match Type created", matchType);
     }).catch(error => {
