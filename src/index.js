@@ -3,7 +3,7 @@ console.log("");
 console.log("-- Starting Demux --")
 console.log("");
 
-const massive = require('massive')
+const { massive } = require('demux-postgres')
 const { BaseActionWatcher } = require("demux")
 const { MassiveActionHandler } = require("demux-postgres")
 const { NodeosActionReader } = require("demux-eos")

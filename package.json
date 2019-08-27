@@ -10,10 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "demux": "^4.0.0",
-    "demux-eos": "^4.0.1",
-    "demux-postgres": "^4.0.1",
-    "massive": "5.7.2",
-    "pg-promise": "8.5.3"
+    "demux": "^5.0.2-560",
+    "demux-eos": "^5.0.4-405",
+    "demux-postgres": "^5.0.2-296"
   }
 }
